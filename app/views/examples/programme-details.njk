@@ -1,0 +1,34 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  <section class="kcl-section kcl-section--intro">
+    <div class="kcl-width-container kcl-reading-width">
+      <p class="kcl-label">Example question page</p>
+      <h1>Programme details</h1>
+      <form class="kcl-form" method="post" action="/examples/programme-details">
+        <div class="kcl-form-group">
+          <label class="kcl-label-text" for="programme-level">Level of study</label>
+          <select id="programme-level" name="programmeLevel">
+            <option value="">Select one</option>
+            <option value="Undergraduate" {% if data.programmeLevel == 'Undergraduate' %}selected{% endif %}>Undergraduate</option>
+            <option value="Postgraduate taught" {% if data.programmeLevel == 'Postgraduate taught' %}selected{% endif %}>Postgraduate taught</option>
+            <option value="Postgraduate research" {% if data.programmeLevel == 'Postgraduate research' %}selected{% endif %}>Postgraduate research</option>
+          </select>
+        </div>
+
+        <fieldset class="kcl-form-group">
+          <legend class="kcl-label-text">Study mode</legend>
+          <label class="kcl-radio"><input type="radio" name="studyMode" value="Full time" {% if data.studyMode == 'Full time' %}checked{% endif %}> Full time</label>
+          <label class="kcl-radio"><input type="radio" name="studyMode" value="Part time" {% if data.studyMode == 'Part time' %}checked{% endif %}> Part time</label>
+        </fieldset>
+
+        <div class="kcl-form-group">
+          <label class="kcl-label-text" for="start-year">Start year</label>
+          <input id="start-year" name="startYear" inputmode="numeric" value="{{ data.startYear }}">
+        </div>
+
+        <button class="kcl-button" type="submit">Continue</button>
+      </form>
+    </div>
+  </section>
+{% endblock %}

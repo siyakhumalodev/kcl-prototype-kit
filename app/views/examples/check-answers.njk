@@ -1,0 +1,28 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  <section class="kcl-section kcl-section--intro">
+    <div class="kcl-width-container kcl-reading-width">
+      <p class="kcl-label">Example summary page</p>
+      <h1>Check your answers</h1>
+      <dl class="kcl-summary-list">
+        <div>
+          <dt>Level of study</dt>
+          <dd>{{ data.programmeLevel or 'Not provided' }}</dd>
+          <dd><a href="/examples/programme-details">Change</a></dd>
+        </div>
+        <div>
+          <dt>Study mode</dt>
+          <dd>{{ data.studyMode or 'Not provided' }}</dd>
+          <dd><a href="/examples/programme-details">Change</a></dd>
+        </div>
+        <div>
+          <dt>Start year</dt>
+          <dd>{{ data.startYear or 'Not provided' }}</dd>
+          <dd><a href="/examples/programme-details">Change</a></dd>
+        </div>
+      </dl>
+      <a class="kcl-button" href="/">Finish example</a>
+    </div>
+  </section>
+{% endblock %}

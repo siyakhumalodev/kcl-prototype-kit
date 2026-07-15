@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ pageTitle }} - {{ serviceName }}</title>
+    <link rel="stylesheet" href="/public/styles/main.css">
+  </head>
+  <body>
+    <a class="kcl-skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="kcl-header">
+      <div class="kcl-width-container kcl-header__inner">
+        <a class="kcl-header__brand" href="/" aria-label="King's College London home">
+          <img src="/assets/logo/kcl-logo.svg" alt="King's College London">
+        </a>
+        <nav class="kcl-header__nav" aria-label="Primary navigation">
+          <a href="/" {% if currentPath == '/' %}aria-current="page"{% endif %}>Prototype kit</a>
+          <a href="/examples/start-page" {% if currentPath == '/examples/start-page' %}aria-current="page"{% endif %}>Examples</a>
+          <a href="/prototype-admin/reset?returnPage={{ currentPath | urlencode }}">Reset data</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="kcl-main" id="main-content" tabindex="-1">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="kcl-footer">
+      <div class="kcl-width-container kcl-footer__inner">
+        <p>King's College London prototype kit</p>
+        <nav aria-label="Footer navigation">
+          <a href="/">Home</a>
+          <a href="/prototype-admin/reset?returnPage={{ currentPath | urlencode }}">Reset data</a>
+          <a href="https://www.kcl.ac.uk/sitehelp/accessibility">Accessibility</a>
+          <a href="https://www.kcl.ac.uk/terms/privacy">Privacy</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

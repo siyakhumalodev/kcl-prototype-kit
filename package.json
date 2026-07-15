@@ -1,0 +1,31 @@
+{
+  "name": "kcl-prototype-kit",
+  "version": "0.1.0",
+  "description": "A King's College London branded prototype kit for rapidly building HTML service prototypes.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "prototype-kit",
+    "kcl",
+    "kings-college-london",
+    "express",
+    "nunjucks"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

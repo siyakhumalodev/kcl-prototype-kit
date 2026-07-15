@@ -1,0 +1,43 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  <section class="kcl-hero">
+    <div class="kcl-width-container kcl-hero__grid">
+      <div>
+        <p class="kcl-label">Prototype kit</p>
+        <h1>Build King's College London service prototypes quickly</h1>
+        <p class="kcl-lede">Use this kit to test journeys, content and interaction patterns before committing to production code.</p>
+        <div class="kcl-actions">
+          <a class="kcl-button" href="/examples/start-page">View an example</a>
+          <a class="kcl-link-button" href="#getting-started">Get started</a>
+        </div>
+      </div>
+      <aside class="kcl-hero__panel" aria-label="Prototype kit contents">
+        <h2>Included</h2>
+        <ul>
+          <li>Express routes</li>
+          <li>Nunjucks layouts</li>
+          <li>KCL branded styles</li>
+          <li>Accessible starter pages</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="kcl-section" id="getting-started">
+    <div class="kcl-width-container kcl-grid kcl-grid--two">
+      <div>
+        <h2>Get started</h2>
+        <ol class="kcl-steps">
+          <li>Install dependencies with <code>npm install</code>.</li>
+          <li>Start the kit with <code>npm run dev</code>.</li>
+          <li>Add pages in <code>app/views</code> and routes in <code>app/routes.js</code>.</li>
+        </ol>
+      </div>
+      <div>
+        <h2>Design principles</h2>
+        <p>Keep prototypes clear, accessible and easy to change. Start with real user tasks, use plain English, and test the smallest journey that can answer the current design question.</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}
